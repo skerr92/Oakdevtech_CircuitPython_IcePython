@@ -3,8 +3,8 @@
 #
 # SPDX-License-Identifier: Unlicense
 
-import board, time
-import busio
+import board
+import time
 import oakdevtech_icepython
 
 iceprog = oakdevtech_icepython.Oakdevtech_icepython(board.SPI(),board.A5,board.A4,"top_bitmap1.bin")
