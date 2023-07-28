@@ -18,7 +18,11 @@ Introduction
     :target: https://github.com/psf/black
     :alt: Code Style: Black
 
-A library for programming iCE40 FPGA from Lattice Semi
+Usually to program an iCE40 FPGA from Lattice Semiconductor you need an FTDI chip or some other tool like OpenOCD and a device capable of communicating over SPI.
+This has changed now with IcePython, a driver library for CircuitPython which allows you to program any iCE40 FPGA with a simple command.
+
+Simply instantiate the IcePython class with a SPI object, a pin for chip select, and a pin for FPGA reset, and a filename, and you'r good to go. Calling `program_fpga()` then
+programs the FPGA with the bin file provided. Be sure to include all the required dependencies. For usage details, please see the example in the examples directory.
 
 
 Dependencies
