@@ -15,7 +15,7 @@ jobs:
     - name: Run GitHub Release CI workflow
       uses: adafruit/workflows-circuitpython-libs/release-gh@main
       with:
-        github-token: ${{ secrets.GH_RP_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         upload-url: ${{ github.event.release.upload_url }}
         # TODO: If you're creating a package (library is a folder), add this
         # argument along with the prefix (or full name) of the package folder
