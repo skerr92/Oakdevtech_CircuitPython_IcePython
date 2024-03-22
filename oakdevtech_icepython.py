@@ -53,9 +53,9 @@ class Oakdevtech_icepython:
         self._reset.value = True
         self._chip_sel.value = True
         try:
-            self._file = io.open(filename, mode="rb")# pylint: disable=R1732
-        except: # pylint: disable=W0133,W0702
-            Exception("\nNo such file: ") # pylint: disable=W0702
+            self._file = io.open(filename, mode="rb")  # pylint: disable=R1732
+        except:  # pylint: disable=W0133,W0702
+            Exception("\nNo such file: ")  # pylint: disable=W0702
         finally:
             print("\nfinished init...")
 
@@ -102,4 +102,7 @@ class Oakdevtech_icepython:
             self._spi.readinto(temp_buf)
             self._spi.unlock()
         else:
-            raise Exception("No file contents '%d' size.." % (len(filecontents))) # pylint: disable=W0719,C0209
+            raise Exception(  # pylint: disable=W0719
+                "No file contents '%d' size.."  # pylint: disable=C0209
+                % (len(filecontents))
+            )
